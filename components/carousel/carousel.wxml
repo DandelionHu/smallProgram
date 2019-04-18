@@ -1,0 +1,13 @@
+<!--components/carousel/index.wxml-->
+  <view class="container" wx:if="{{banner.length!=0}}">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" 
+      indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}"
+      bindchange="bindchange" duration="{{duration}}" interval="{{interval}}" circular="{{circular}}" 
+      style="height:{{bannerHeight[bannerCurrent]}}rpx;">
+      <block wx:for="{{banner}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{baseUrl+item.url}}" class="slide-image" mode="widthFix" bindload="imageLoad" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>

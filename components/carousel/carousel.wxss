@@ -1,0 +1,10 @@
+/* components/carousel/index.wxss */
+.container{
+    display: flex;
+}
+.swiper{
+    width: 100%;
+}
+.slide-image{
+    width: 100%;
+}

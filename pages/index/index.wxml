@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+    <text>{{coupon[0].couponTypeName}}</text>
+    <text>{{coupon[0].createTime}}</text>
+    <carousel-cmp  banner="{{banner}}" class="banner"/>
+</view>

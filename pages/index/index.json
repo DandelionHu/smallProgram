@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "carousel-cmp": "/components/carousel/carousel"
+  }
+}
