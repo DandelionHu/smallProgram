@@ -1,0 +1,3 @@
+<!--components/mask/mask.wxml-->
+<!-- 蒙版组件 -->
+<view class="mask-container"></view>

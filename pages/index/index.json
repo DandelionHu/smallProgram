@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "carousel-cmp": "/components/carousel/carousel"
+    "v-carousel": "/components/carousel/carousel",
+    "v-mask": "/components/mask/mask",
+    "v-tag": "/components/tag/tag"
   }
 }

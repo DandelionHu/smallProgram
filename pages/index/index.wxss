@@ -11,3 +11,17 @@
 .banner {
     width:720rpx;
 }
+.tag-container{
+    width: 720rpx;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: left;
+}
+.tag-container v-tag{
+    margin-right: 10rpx;
+}
+.tag-container v-tag .num{
+    font-size: 20rpx;
+}

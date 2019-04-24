@@ -1,0 +1,9 @@
+/* components/tag/tag.wxss */
+.container{
+    background: #eee;
+    padding: 4rpx 12rpx;
+    color: #666;
+    border-radius: 2rpx;
+    display: inline-flex;
+    font-size: 28rpx;
+}

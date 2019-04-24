@@ -4,7 +4,7 @@
       indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}"
       bindchange="bindchange" duration="{{duration}}" interval="{{interval}}" circular="{{circular}}" 
       style="height:{{bannerHeight[bannerCurrent]}}rpx;">
-      <block wx:for="{{banner}}" wx:for-index="index">
+      <block wx:for="{{banner}}" wx:for-index="index" wx:key="url">
         <swiper-item>
           <image src="{{baseUrl+item.url}}" class="slide-image" mode="widthFix" bindload="imageLoad" />
         </swiper-item>

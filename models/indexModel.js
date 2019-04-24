@@ -42,6 +42,16 @@ class IndexModel extends HTTP{
         }
         this.request(params)
     }
+    //获取轮播图 http-p
+    getHomeP(data,message){
+        return this.request({
+            url: '/poster/home',
+            isToken:false,//是否需要token
+            message:message?message:'',
+            data:data,
+            method:'GET', //请求方式
+        })
+    }
 }
 
 export { IndexModel }

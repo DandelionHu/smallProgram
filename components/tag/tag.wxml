@@ -1,0 +1,6 @@
+<!--components/tag/tag.wxml-->
+<view class="container">
+    <text>{{content}}</text>
+    <slot name="after"></slot>
+    <!-- slot 插槽 -->
+</view>

@@ -1,6 +1,18 @@
 <!--pages/index/index.wxml-->
+<!-- 引入wxs文件 -->
+<wxs src='../../utils/filter.wxs' module="util"></wxs>
+<!-- v-开头代表引入的组件 -->
 <view class="container">
-    <text>{{coupon[0].couponTypeName}}</text>
+    <text>{{util.omit(coupon[0].couponTypeName,2)}}</text>
     <text>{{coupon[0].createTime}}</text>
-    <carousel-cmp  banner="{{banner}}" class="banner"/>
+    <v-carousel  banner="{{banner}}" class="banner"/>
+    <view class="tag-container">
+        <block wx:for="{{banner}}" wx:key="url">
+            <v-tag content="{{util.omit(item.url,15)}}">
+                <text class="num" slot="after">+1</text>
+            </v-tag>
+        </block>
+    </view>
+
+    <!-- <v-mask /> -->
 </view>

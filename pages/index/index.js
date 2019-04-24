@@ -9,7 +9,7 @@ Page({
    */
   data: {
     coupon:'',
-    banner:''
+    banner:[]
   },
 
   /**
@@ -17,7 +17,6 @@ Page({
    */
   onLoad: function (options) {
     this.getHome();
-    this.getCoupon();
   },
 
   /**生命周期函数--监听页面初次渲染完成*/
@@ -53,19 +52,6 @@ Page({
   /**用户点击右上角分享*/
   onShareAppMessage: function () {
 
-  },
-  //获取优惠券
-  getCoupon:function(){
-    var data={};
-    var message='';
-    indexModel.getCoupon(data,message,(res)=>{
-      if(res.returnValue[0]){
-        res.returnValue[0].createTime=util.formatDate(new Date(res.returnValue[0].createTime),'yyyy-MM-dd')
-        this.setData({
-          coupon:res.returnValue
-        })
-      }
-    })
   },
   //获取轮播图
   getHome:function(){

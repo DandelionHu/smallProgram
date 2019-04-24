@@ -1,0 +1,29 @@
+//过滤器  wxs文件编写可以参考es5, 好处是wxml中可以调用方法，并且不污染js中的data
+
+//多少个字之后带省略号
+var omit=function(text,length){
+    if(!text){
+        return;
+    }
+    console.log(text);
+    var short=text.substring(0,length);//剪切字符串
+    return short + '...'
+}
+//一段文本中的换行 \\n=>\n
+var  format=function(text){
+    if(!text){
+        return false;
+    }
+    var reg=getRegExp('\\\\n','g');//正则表达式，g全局
+    return text.replace(reg,'\n&nbsp;&nbsp;&nbsp;&nbsp;');//替换
+}
+//显示数组前都少个
+var limt=function(array,length){
+    return array.slice(0,length);//剪切数组
+}
+
+module.exports={
+    omit:omit,
+    format:format,
+    limt:limt
+}
